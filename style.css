@@ -1,0 +1,49 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  background-color: #eae9de;
+}
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+figure {
+  border-width: 15px;
+  max-width: 300px;
+  position: relative;
+  display: grid;
+}
+
+figure:before,
+figure:after {
+  content: '';
+  border: solid #790992;
+  transform: rotate(45deg);
+  grid-area: 1 / 1;
+}
+
+figure:before {
+  border-width: 15px 0;
+  z-index: -1;
+}
+
+figure:after {
+  border-width: 0 15px;
+}
+
+img {
+  grid-area: 1 / 1;
+  width: 100%;
+  border: 13px solid #d8a6fe;
+  box-shadow: 0 10px 10px 0 rgba(38, 38, 38);
+}
